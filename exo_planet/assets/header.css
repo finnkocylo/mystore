@@ -1,0 +1,23 @@
+.app-header {
+    height: 100px;
+    background-color: #3aa3e5;
+    font-size: 20px;
+    border-bottom: thin grey solid;
+}
+
+
+.app-referral {
+    color: #333;
+    display: flex;
+    bottom: 0;
+}
+
+
+.app-body {
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 30px;
+    padding-left: 10px;
+}
+
+

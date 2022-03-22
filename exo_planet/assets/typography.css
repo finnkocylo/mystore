@@ -1,0 +1,33 @@
+body {
+    font-family: 'Century Gothic';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 10pt;
+}
+
+
+h1 {
+    font-size: 25pt;
+    font-weight: 600;
+    color: #333;
+    margin-top: 10px;
+}
+
+
+h2, h3, h4, h5, h6 {
+    font-family: 'Century Gothic';
+    font-weight: 400;
+    font-style: lighter;
+    color: #333;
+    margin-left: 15px;
+
+}
+
+a {
+    color: #bbb;
+}
+
+
+.Select--multi .Select-value{
+    font-size: 10pt;
+}

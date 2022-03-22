@@ -1,0 +1,103 @@
+Metadata-Version: 2.1
+Name: retailcrm
+Version: 5.1.2
+Summary: RetailCRM API client
+Home-page: https://github.com/retailcrm/api-client-python
+Author: RetailCRM
+Author-email: support@retailcrm.pro
+License: MIT
+Keywords: crm saas rest e-commerce
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Other Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: multidimensional-urlencode
+Requires-Dist: nose
+Requires-Dist: coverage
+Requires-Dist: pook
+Requires-Dist: setuptools
+
+RetailCRM python API client
+===========================
+
+This is python RetailCRM API client. This library allows to use all
+available API versions.
+
+Install
+-------
+
+::
+
+    pip3 install retailcrm
+
+Usage
+-----
+
+
+.. code:: python
+
+    # coding utf-8
+
+    import retailcrm
+
+
+    client = retailcrm.v3('https://demo.retailcrm.pro', 'uLxXKBwjQteE9NkO3cJAqTXNwvKktaTc')
+
+    order = {
+      'firstName': 'John',
+      'lastName': 'Doe',
+      'phone': '+79000000000',
+      'email': 'john@example.com',
+      'orderMethod': 'call-request',
+    }
+
+    result = client.order_create(order)
+
+
+.. code:: python
+
+    # coding utf-8
+
+    import retailcrm
+
+
+    client = retailcrm.v4('https://demo.retailcrm.pro', 'uLxXKBwjQteE9NkO3cJAqTXNwvKktaTc')
+
+    result = client.customers_history(filter={'sinceId': '1500', 'startDate': '2018-03-01'})
+
+    print(result['pagination']['totalCount'])
+
+
+.. code:: python
+
+    # coding utf-8
+
+    import retailcrm
+
+
+    client = retailcrm.v5('https://demo.retailcrm.pro', 'uLxXKBwjQteE9NkO3cJAqTXNwvKktaTc')
+    site = 'example-com'
+    task = {
+      'text': 'Product availability problem',
+      'commentary': 'Take a look ASAP',
+      'order': {
+        'externalId': '100500'
+      },
+      'performerId': 1
+    }
+
+    result = client.task_create(task, site)
+
+

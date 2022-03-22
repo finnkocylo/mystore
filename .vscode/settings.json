@@ -1,0 +1,6 @@
+{
+    "python.analysis.extraPaths": [
+        "./crm/api-client-python"
+    ],
+    "git.ignoreLimitWarning": true
+}

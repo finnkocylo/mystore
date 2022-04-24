@@ -1,0 +1,6 @@
+pandas
+xlrd
+dash
+numpy
+dash-bootstrap-components
+openpyxl
